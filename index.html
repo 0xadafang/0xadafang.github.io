@@ -1,3 +1,6 @@
+
+raw
+Index · HTML
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
     :root {
       --bg: #08080c;
       --bg-elevated: #0e0e14;
@@ -39,9 +42,9 @@
       --max-w: 1140px;
       --gutter: 24px;
     }
-
+ 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-
+ 
     body {
       font-family: var(--font-body);
       background: var(--bg);
@@ -50,19 +53,19 @@
       font-size: 15px;
       overflow-x: hidden;
     }
-
+ 
     ::selection { background: var(--neon-cyan); color: var(--bg); }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
-
+ 
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 0 var(--gutter);
     }
-
+ 
     section { padding: 100px 0; position: relative; }
-
+ 
     /* ═══════════════════════════════════════
        NAV
     ═══════════════════════════════════════ */
@@ -73,29 +76,29 @@
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-subtle);
     }
-
+ 
     .nav-inner {
       max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter);
       display: flex; align-items: center; justify-content: space-between; height: 60px;
     }
-
+ 
     .nav-logo {
       font-family: var(--font-mono);
       font-size: 16px;
       color: var(--neon-cyan);
       letter-spacing: 0.05em;
     }
-
+ 
     .nav-logo .blink { animation: blink 1s step-end infinite; }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
+ 
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       font-size: 13px; color: var(--text-muted);
       transition: color 0.2s; letter-spacing: 0.02em;
     }
     .nav-links a:hover { color: var(--neon-cyan); }
-
+ 
     .nav-status {
       display: flex; align-items: center; gap: 8px;
       font-size: 12px; color: var(--neon-green); letter-spacing: 0.03em;
@@ -110,12 +113,12 @@
       0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--neon-green); }
       50% { opacity: 0.6; box-shadow: 0 0 16px var(--neon-green), 0 0 4px var(--neon-green); }
     }
-
+ 
     /* ═══════════════════════════════════════
        HERO
     ═══════════════════════════════════════ */
     .hero { padding: 160px 0 100px; position: relative; overflow: hidden; }
-
+ 
     /* Ambient glow */
     .hero::before {
       content: ''; position: absolute; top: -100px; left: 20%;
@@ -129,42 +132,42 @@
       background: radial-gradient(circle, rgba(255, 42, 252, 0.04) 0%, transparent 70%);
       pointer-events: none;
     }
-
+ 
     .hero-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 48px;
       align-items: center;
     }
-
+ 
     .hero-intro {
       font-family: var(--font-mono); font-size: 13px;
       color: var(--neon-cyan); letter-spacing: 0.08em;
       text-transform: uppercase; margin-bottom: 20px;
       text-shadow: 0 0 20px rgba(0, 255, 213, 0.3);
     }
-
+ 
     .hero h1 {
       font-family: var(--font-display);
       font-size: clamp(38px, 5vw, 62px);
       font-weight: 400; line-height: 1.1;
       letter-spacing: -1px; margin-bottom: 24px;
     }
-
+ 
     .hero h1 em {
       font-style: italic;
       background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+ 
     .hero-desc {
       max-width: 480px; font-size: 15px;
       color: var(--text-muted); line-height: 1.7; margin-bottom: 36px;
     }
-
+ 
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
+ 
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 12px 28px;
@@ -177,7 +180,7 @@
       box-shadow: 0 0 30px rgba(0, 255, 213, 0.35);
       transform: translateY(-1px);
     }
-
+ 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 12px 28px; background: transparent;
@@ -186,7 +189,7 @@
       cursor: pointer; transition: all 0.25s;
     }
     .btn-ghost:hover { border-color: var(--neon-cyan); color: var(--neon-cyan); }
-
+ 
     /* Stats row */
     .hero-stats {
       display: flex; gap: 40px; margin-top: 56px; padding-top: 32px;
@@ -197,7 +200,7 @@
       font-size: 28px; font-weight: 400; color: var(--text); letter-spacing: -1px;
     }
     .hero-stat span { font-size: 12px; color: var(--text-dim); }
-
+ 
     /* ── Terminal Animation ── */
     .hero-terminal {
       background: var(--bg-elevated);
@@ -209,7 +212,7 @@
         0 20px 80px rgba(0, 0, 0, 0.5);
       position: relative;
     }
-
+ 
     .hero-terminal::before {
       content: '';
       position: absolute; inset: -1px;
@@ -221,25 +224,25 @@
       mask-composite: exclude;
       pointer-events: none;
     }
-
+ 
     .term-topbar {
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px 18px;
       background: rgba(255, 255, 255, 0.02);
       border-bottom: 1px solid var(--border-subtle);
     }
-
+ 
     .term-dots { display: flex; gap: 6px; }
     .term-dots span { width: 10px; height: 10px; border-radius: 50%; }
     .term-dots span:nth-child(1) { background: #ff5f56; }
     .term-dots span:nth-child(2) { background: #ffbd2e; }
     .term-dots span:nth-child(3) { background: #27c93f; }
-
+ 
     .term-title {
       font-family: var(--font-mono); font-size: 11px;
       color: var(--text-dim); letter-spacing: 0.03em;
     }
-
+ 
     .term-body {
       padding: 20px 22px;
       font-family: var(--font-mono);
@@ -247,9 +250,9 @@
       line-height: 1.9;
       min-height: 280px;
     }
-
+ 
     .term-line { opacity: 0; animation: term-fade-in 0.3s ease forwards; }
-
+ 
     .term-prompt { color: var(--neon-cyan); }
     .term-cmd { color: var(--text); font-weight: 500; }
     .term-path { color: var(--neon-purple); }
@@ -259,26 +262,26 @@
     .term-muted { color: var(--text-dim); }
     .term-ascii { color: var(--text-dim); font-size: 11px; line-height: 1.3; }
     .term-brand { color: var(--neon-cyan); font-weight: 500; }
-
+ 
     .term-cursor {
       display: inline-block; width: 8px; height: 16px;
       background: var(--neon-cyan); vertical-align: middle;
       animation: blink 1s step-end infinite;
       box-shadow: 0 0 8px rgba(0, 255, 213, 0.5);
     }
-
+ 
     @keyframes term-fade-in {
       from { opacity: 0; transform: translateY(4px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+ 
     .d1 { animation-delay: 0.3s; } .d2 { animation-delay: 0.6s; }
     .d3 { animation-delay: 1.0s; } .d4 { animation-delay: 1.4s; }
     .d5 { animation-delay: 1.8s; } .d6 { animation-delay: 2.1s; }
     .d7 { animation-delay: 2.4s; } .d8 { animation-delay: 2.7s; }
     .d9 { animation-delay: 3.0s; } .d10 { animation-delay: 3.3s; }
     .d11 { animation-delay: 3.6s; }
-
+ 
     /* Scan line effect */
     .term-scanline {
       position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -288,7 +291,7 @@
       );
       pointer-events: none; border-radius: 14px;
     }
-
+ 
     /* ═══════════════════════════════════════
        SECTIONS COMMON
     ═══════════════════════════════════════ */
@@ -297,26 +300,80 @@
       color: var(--neon-cyan); letter-spacing: 0.08em; margin-bottom: 12px;
       text-shadow: 0 0 15px rgba(0, 255, 213, 0.25);
     }
-
+ 
     .section-title {
       font-family: var(--font-display);
       font-size: clamp(28px, 4vw, 40px);
       font-weight: 400; letter-spacing: -0.5px;
       margin-bottom: 16px; line-height: 1.2;
     }
-
+ 
     .section-subtitle { font-size: 15px; color: var(--text-muted); max-width: 480px; }
-
+ 
     .section-divider {
       width: 100%; height: 1px;
       background: linear-gradient(90deg, transparent, var(--border), transparent);
     }
-
+ 
+    /* ═══════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════ */
+    .about-section { padding: 100px 0; }
+ 
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 64px;
+      align-items: start;
+    }
+ 
+    .about-text {
+      font-size: 15px; color: var(--text-muted);
+      line-height: 1.8; margin-bottom: 20px;
+    }
+ 
+    .about-values {
+      margin-top: 32px;
+      display: flex; flex-direction: column; gap: 20px;
+    }
+ 
+    .about-value {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      transition: border-color 0.3s;
+    }
+ 
+    .about-value:hover { border-color: var(--border); }
+ 
+    .about-value-icon {
+      font-size: 20px;
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px; flex-shrink: 0;
+    }
+ 
+    .about-value strong {
+      display: block; font-size: 14px; color: var(--text);
+      margin-bottom: 2px;
+    }
+ 
+    .about-value span {
+      font-size: 13px; color: var(--text-dim);
+    }
+ 
+    @media (max-width: 960px) {
+      .about-layout { grid-template-columns: 1fr; gap: 32px; }
+    }
+ 
     /* ═══════════════════════════════════════
        PROJECTS
     ═══════════════════════════════════════ */
     .projects-grid { margin-top: 56px; display: flex; flex-direction: column; gap: 32px; }
-
+ 
     .project-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -324,7 +381,7 @@
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
       position: relative;
     }
-
+ 
     .project-card::before {
       content: ''; position: absolute; inset: -1px;
       border-radius: 16px; padding: 1px;
@@ -333,68 +390,68 @@
       -webkit-mask-composite: xor; mask-composite: exclude;
       pointer-events: none; transition: background 0.3s;
     }
-
+ 
     .project-card:hover::before {
       background: linear-gradient(135deg, rgba(0, 255, 213, 0.15), transparent 50%, rgba(255, 42, 252, 0.1));
     }
-
+ 
     .project-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
     }
-
+ 
     .project-inner {
       display: grid; grid-template-columns: 1fr 1fr;
       min-height: 360px;
     }
-
+ 
     .project-info {
       padding: 44px;
       display: flex; flex-direction: column; justify-content: center;
     }
-
+ 
     .project-badge {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
       text-transform: uppercase; padding: 5px 12px;
       border-radius: 100px; width: fit-content; margin-bottom: 20px;
     }
-
+ 
     .badge-marketplace { background: var(--neon-yellow-dim); color: var(--neon-yellow); }
     .badge-saas { background: var(--neon-cyan-dim); color: var(--neon-cyan); }
     .badge-ai { background: var(--neon-purple-dim); color: var(--neon-purple); }
     .badge-game { background: rgba(255, 56, 96, 0.1); color: var(--neon-red); }
-
+ 
     .project-name {
       font-family: var(--font-display);
       font-size: 30px; font-weight: 400; letter-spacing: -0.5px; margin-bottom: 12px;
     }
-
+ 
     .project-desc {
       font-size: 14px; color: var(--text-muted);
       line-height: 1.7; margin-bottom: 24px; max-width: 420px;
     }
-
+ 
     .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-
+ 
     .tag {
       font-family: var(--font-mono); font-size: 11px;
       padding: 4px 10px; border-radius: 6px;
       background: rgba(255, 255, 255, 0.03);
       color: var(--text-dim); border: 1px solid var(--border-subtle);
     }
-
+ 
     .project-link {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 13px; font-weight: 500; color: var(--neon-cyan); transition: gap 0.2s;
     }
     .project-link:hover { gap: 10px; }
-
+ 
     .project-visual {
       position: relative; display: flex; align-items: center;
       justify-content: center; overflow: hidden;
     }
-
+ 
     /* Stacked Deck Visual */
     .sd-visual { background: linear-gradient(135deg, #14100a 0%, #0e0e14 100%); padding: 40px; }
     .sd-cards { position: relative; width: 200px; height: 280px; }
@@ -416,7 +473,7 @@
       position: absolute; bottom: 16px; text-align: center; width: 100%;
       letter-spacing: 0.1em; text-transform: uppercase;
     }
-
+ 
     /* Narrativ Visual */
     .nv-visual { background: linear-gradient(135deg, #0a100e 0%, #0e0e14 100%); padding: 32px; }
     .nv-mockup {
@@ -444,7 +501,7 @@
     .nv-chapter { font-family: var(--font-display); font-size: 14px; margin-bottom: 12px; color: var(--text); }
     .nv-line { height: 6px; background: rgba(255, 255, 255, 0.04); border-radius: 3px; margin-bottom: 6px; }
     .nv-line.w80 { width: 80%; } .nv-line.w60 { width: 60%; } .nv-line.w90 { width: 90%; } .nv-line.w45 { width: 45%; }
-
+ 
     /* LuminAI Visual */
     .lu-visual { background: linear-gradient(135deg, #0e0a16 0%, #0e0e14 100%); padding: 40px; }
     .lu-flow { display: flex; flex-direction: column; align-items: center; gap: 12px; }
@@ -462,33 +519,33 @@
     .lu-node-pdf .lu-node-icon { background: rgba(255, 56, 96, 0.15); }
     .lu-node-process .lu-node-icon { background: var(--neon-purple-dim); }
     .lu-node-output .lu-node-icon { background: var(--neon-cyan-dim); }
-
+ 
     /* Future Project */
     .future-visual { background: linear-gradient(135deg, #140a0a 0%, #0e0e14 100%); padding: 40px; display: flex; align-items: center; justify-content: center; }
     .future-icon { font-size: 80px; opacity: 0.3; filter: grayscale(0.5); }
     .project-card-future { opacity: 0.65; border-style: dashed; }
     .project-card-future:hover { opacity: 1; }
-
+ 
     /* ═══════════════════════════════════════
        SKILLS
     ═══════════════════════════════════════ */
     .skills-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
+ 
     .skill-group {
       background: var(--bg-card); border: 1px solid var(--border-subtle);
       border-radius: 14px; padding: 32px; transition: border-color 0.3s;
     }
     .skill-group:hover { border-color: var(--border); }
-
+ 
     .skill-group-title {
       font-family: var(--font-mono); font-size: 11px;
       color: var(--neon-cyan); letter-spacing: 0.08em;
       text-transform: uppercase; margin-bottom: 20px;
       text-shadow: 0 0 12px rgba(0, 255, 213, 0.2);
     }
-
+ 
     .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
+ 
     .skill-tag {
       font-size: 13px; padding: 6px 14px; border-radius: 8px;
       background: rgba(255, 255, 255, 0.02);
@@ -499,7 +556,7 @@
       background: var(--neon-cyan-dim);
       color: var(--neon-cyan); border-color: rgba(0, 255, 213, 0.2);
     }
-
+ 
     /* Code block */
     .code-block {
       background: var(--bg-elevated); border: 1px solid var(--border-subtle);
@@ -512,7 +569,7 @@
     .code-block .str { color: var(--neon-cyan); }
     .code-block .cmt { color: #2a2a40; font-style: italic; }
     .code-block .type { color: var(--neon-yellow); }
-
+ 
     /* ═══════════════════════════════════════
        TIMELINE
     ═══════════════════════════════════════ */
@@ -537,16 +594,16 @@
     .timeline-role { font-family: var(--font-display); font-size: 22px; font-weight: 400; margin-bottom: 4px; }
     .timeline-place { font-size: 13px; color: var(--text-dim); margin-bottom: 10px; }
     .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 500px; }
-
+ 
     /* ═══════════════════════════════════════
        CONTACT
     ═══════════════════════════════════════ */
     .contact-section { text-align: center; padding: 120px 0; }
     .contact-section .section-title { font-size: clamp(32px, 4.5vw, 48px); }
     .contact-section .section-subtitle { margin: 0 auto 40px; }
-
+ 
     .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-
+ 
     .contact-link {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 12px 24px; border-radius: 10px;
@@ -559,7 +616,7 @@
       box-shadow: 0 0 20px rgba(0, 255, 213, 0.08);
     }
     .contact-link svg { width: 18px; height: 18px; }
-
+ 
     /* ═══════════════════════════════════════
        FOOTER
     ═══════════════════════════════════════ */
@@ -573,7 +630,7 @@
       font-family: var(--font-mono); font-size: 11px;
       color: var(--text-dim); margin-top: 6px; letter-spacing: 0.04em;
     }
-
+ 
     /* ═══════════════════════════════════════
        ANIMATIONS
     ═══════════════════════════════════════ */
@@ -584,10 +641,10 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .stagger-1 { transition-delay: 0.05s; } .stagger-2 { transition-delay: 0.1s; }
     .stagger-3 { transition-delay: 0.15s; } .stagger-4 { transition-delay: 0.2s; }
-
+ 
     /* Neon glow text utility */
     .glow-cyan { text-shadow: 0 0 20px rgba(0, 255, 213, 0.3), 0 0 40px rgba(0, 255, 213, 0.1); }
-
+ 
     /* ═══════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════ */
@@ -600,7 +657,7 @@
       .skills-grid { grid-template-columns: 1fr; }
       .hero-stats { gap: 24px; flex-wrap: wrap; }
     }
-
+ 
     @media (max-width: 600px) {
       section { padding: 72px 0; }
       .hero { padding: 130px 0 70px; }
@@ -610,12 +667,13 @@
   </style>
 </head>
 <body>
-
+ 
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">ts<span class="blink">_</span></a>
       <ul class="nav-links">
+        <li><a href="#about">À propos</a></li>
         <li><a href="#projects">Projets</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#experience">Parcours</a></li>
@@ -624,25 +682,25 @@
       <span class="nav-status">Disponible</span>
     </div>
   </nav>
-
+ 
   <!-- HERO -->
   <section class="hero">
     <div class="container">
       <div class="hero-layout">
         <div class="hero-left">
           <p class="hero-intro reveal">Développeur Full-Stack · Montréal</p>
-
+ 
           <h1 class="reveal stagger-1">
             Terence<br>Sionneau<br>
             <em>Full-Stack</em>
           </h1>
-
+ 
           <p class="hero-desc reveal stagger-2">
-            Je conçois des applications complètes — du backend Java / C#
-            jusqu'à l'interface Angular. Architectures propres, produits
-            pensés pour durer, et un goût prononcé pour le dark mode.
+            Ce qui me drive, c'est construire des applications concrètes que les gens utilisent vraiment — 
+            pas des exercices théoriques. Du backend Java / C# jusqu'à l'interface Angular, 
+            je code des produits complets, de l'architecture à la mise en ligne.
           </p>
-
+ 
           <div class="hero-actions reveal stagger-3">
             <a href="#projects" class="btn-primary">
               Voir mes projets
@@ -650,7 +708,7 @@
             </a>
             <a href="#contact" class="btn-ghost">Me contacter</a>
           </div>
-
+ 
           <div class="hero-stats reveal stagger-4">
             <div class="hero-stat"><strong>3</strong><span>Projets livrés</span></div>
             <div class="hero-stat"><strong>Java / C#</strong><span>Backend</span></div>
@@ -658,7 +716,7 @@
             <div class="hero-stat"><strong>MTL</strong><span>Montréal</span></div>
           </div>
         </div>
-
+ 
         <!-- Terminal Animation -->
         <div class="hero-terminal reveal stagger-2">
           <div class="term-scanline"></div>
@@ -709,18 +767,66 @@
       </div>
     </div>
   </section>
-
+ 
   <div class="section-divider"></div>
-
+ 
+  <!-- À PROPOS -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <p class="section-number">00 — À propos</p>
+          <h2 class="section-title">Code pensé,<br>produits concrets</h2>
+        </div>
+        <div class="about-right reveal stagger-2">
+          <p class="about-text">
+            J'ai toujours voulu construire des choses qui existent pour vrai — pas juste des maquettes ou des projets scolaires qui finissent dans un tiroir. 
+            Chaque projet que je lance, c'est un produit complet : architecture backend solide, frontend soigné, et une vraie raison d'exister.
+          </p>
+          <p class="about-text">
+            Après une reconversion via un AEC en développement logiciel, j'ai plongé tête première dans le code. 
+            Aujourd'hui je travaille en autonomie sur mes propres SaaS et marketplaces, en cherchant constamment à pousser mes skills plus loin — 
+            que ce soit en Clean Architecture, en IA ou bientôt en game dev avec Unity.
+          </p>
+          <div class="about-values">
+            <div class="about-value">
+              <span class="about-value-icon">⚡</span>
+              <div>
+                <strong>Builder mindset</strong>
+                <span>Je code pour livrer, pas pour expérimenter</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <span class="about-value-icon">🏗️</span>
+              <div>
+                <strong>Architecture first</strong>
+                <span>Clean Architecture, CQRS, séparation des couches</span>
+              </div>
+            </div>
+            <div class="about-value">
+              <span class="about-value-icon">🌙</span>
+              <div>
+                <strong>Dark mode only</strong>
+                <span>Mes apps sont sombres, immersives et focalisées</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="section-divider"></div>
+ 
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
       <p class="section-number reveal">01 — Projets</p>
       <h2 class="section-title reveal stagger-1">Ce que j'ai bâti</h2>
       <p class="section-subtitle reveal stagger-2">Des produits conçus de A à Z — architecture, backend, frontend et déploiement.</p>
-
+ 
       <div class="projects-grid">
-
+ 
         <!-- Stacked Deck -->
         <div class="project-card reveal">
           <div class="project-inner">
@@ -753,7 +859,7 @@
             </div>
           </div>
         </div>
-
+ 
         <!-- Narrativ -->
         <div class="project-card reveal">
           <div class="project-inner">
@@ -802,7 +908,7 @@
             </div>
           </div>
         </div>
-
+ 
         <!-- LuminAI -->
         <div class="project-card reveal">
           <div class="project-inner">
@@ -837,7 +943,7 @@
             </div>
           </div>
         </div>
-
+ 
         <!-- Future: Unity Card Game -->
         <div class="project-card project-card-future reveal">
           <div class="project-inner">
@@ -860,20 +966,20 @@
             </div>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
   <div class="section-divider"></div>
-
+ 
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
       <p class="section-number reveal">02 — Compétences</p>
       <h2 class="section-title reveal stagger-1">Stack technique</h2>
       <p class="section-subtitle reveal stagger-2">Un stack construit autour de la robustesse backend et la fluidité frontend.</p>
-
+ 
       <div class="skills-grid">
         <div class="skill-group reveal">
           <p class="skill-group-title">Backend</p>
@@ -914,7 +1020,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="code-block reveal">
         <span class="cmt">// Clean Architecture — CQRS Handler</span><br>
         <span class="kw">public class</span> <span class="type">CreateSceneHandler</span> : <span class="type">IRequestHandler</span>&lt;<span class="type">CreateSceneCommand</span>, <span class="type">SceneDto</span>&gt;<br>
@@ -930,15 +1036,15 @@
       </div>
     </div>
   </section>
-
+ 
   <div class="section-divider"></div>
-
+ 
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
       <p class="section-number reveal">03 — Parcours</p>
       <h2 class="section-title reveal stagger-1">Expérience & Formation</h2>
-
+ 
       <div class="timeline">
         <div class="timeline-item reveal">
           <p class="timeline-date">Juillet 2025 — Présent</p>
@@ -961,9 +1067,9 @@
       </div>
     </div>
   </section>
-
+ 
   <div class="section-divider"></div>
-
+ 
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="container">
@@ -988,14 +1094,14 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-brand">ts<span style="animation: blink 1s step-end infinite;">_</span></div>
     <p class="footer-copy">© 2026 Terence Sionneau — Développeur Full-Stack</p>
     <p class="footer-stack">Java · C# · Angular · Go · Unity</p>
   </footer>
-
+ 
   <!-- SCROLL REVEAL -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -1010,6 +1116,6 @@
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     });
   </script>
-
+ 
 </body>
 </html>
