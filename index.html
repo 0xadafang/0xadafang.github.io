@@ -7,7 +7,7 @@
   <meta name="description" content="Développeur Full-Stack indépendant — Java, C#, Angular. Créateur de Stacked Deck, Narrativ et LuminAI.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -33,14 +33,18 @@
       --neon-purple-dim: rgba(168, 85, 247, 0.10);
       --neon-green: #39ff14;
       --neon-red: #ff3860;
-      --font-display: 'Instrument Serif', Georgia, serif;
-      --font-body: 'DM Sans', -apple-system, sans-serif;
+      --font-display: 'Orbitron', sans-serif;
+      --font-body: 'Outfit', -apple-system, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       --max-w: 1140px;
       --gutter: 24px;
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+    @media (min-width: 961px) {
+      *, *::before, *::after { cursor: none !important; }
+    }
 
     body {
       font-family: var(--font-body);
@@ -80,10 +84,12 @@
     }
 
     .nav-logo {
-      font-family: var(--font-mono);
+      font-family: var(--font-display);
       font-size: 16px;
+      font-weight: 700;
       color: var(--neon-cyan);
       letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     .nav-logo .blink { animation: blink 1s step-end infinite; }
@@ -146,13 +152,15 @@
 
     .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(48px, 7vw, 88px);
-      font-weight: 400; line-height: 1.05;
-      letter-spacing: -2px; margin-bottom: 28px;
+      font-size: clamp(44px, 6.5vw, 82px);
+      font-weight: 700; line-height: 1.1;
+      letter-spacing: -1px; margin-bottom: 28px;
+      text-transform: uppercase;
     }
 
     .hero h1 em {
-      font-style: italic;
+      font-style: normal;
+      font-weight: 800;
       background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -194,7 +202,7 @@
     }
     .hero-stat strong {
       display: block; font-family: var(--font-display);
-      font-size: 28px; font-weight: 400; color: var(--text); letter-spacing: -1px;
+      font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.5px;
     }
     .hero-stat span { font-size: 12px; color: var(--text-dim); }
 
@@ -300,9 +308,10 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 400; letter-spacing: -0.5px;
-      margin-bottom: 16px; line-height: 1.2;
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 700; letter-spacing: -0.3px;
+      margin-bottom: 16px; line-height: 1.25;
+      text-transform: uppercase;
     }
 
     .section-subtitle { font-size: 15px; color: var(--text-muted); max-width: 480px; }
@@ -421,7 +430,8 @@
 
     .project-name {
       font-family: var(--font-display);
-      font-size: 30px; font-weight: 400; letter-spacing: -0.5px; margin-bottom: 12px;
+      font-size: 24px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 12px;
+      text-transform: uppercase;
     }
 
     .project-desc {
@@ -495,7 +505,7 @@
     .nv-sidebar-item { font-size: 10px; color: var(--text-dim); padding: 5px 8px; border-radius: 4px; margin-bottom: 2px; }
     .nv-sidebar-item.active { background: var(--neon-cyan-dim); color: var(--neon-cyan); }
     .nv-content { padding: 16px; }
-    .nv-chapter { font-family: var(--font-display); font-size: 14px; margin-bottom: 12px; color: var(--text); }
+    .nv-chapter { font-family: var(--font-body); font-size: 13px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
     .nv-line { height: 6px; background: rgba(255, 255, 255, 0.04); border-radius: 3px; margin-bottom: 6px; }
     .nv-line.w80 { width: 80%; } .nv-line.w60 { width: 60%; } .nv-line.w90 { width: 90%; } .nv-line.w45 { width: 45%; }
 
@@ -588,7 +598,7 @@
       color: var(--neon-cyan); margin-bottom: 6px;
       text-shadow: 0 0 10px rgba(0, 255, 213, 0.2);
     }
-    .timeline-role { font-family: var(--font-display); font-size: 22px; font-weight: 400; margin-bottom: 4px; }
+    .timeline-role { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: 4px; text-transform: uppercase; }
     .timeline-place { font-size: 13px; color: var(--text-dim); margin-bottom: 10px; }
     .timeline-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 500px; }
 
@@ -621,7 +631,7 @@
       text-align: center; padding: 40px var(--gutter);
       border-top: 1px solid var(--border-subtle);
     }
-    .footer-brand { font-family: var(--font-mono); font-size: 16px; color: var(--neon-cyan); }
+    .footer-brand { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--neon-cyan); text-transform: uppercase; }
     .footer-copy { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
     .footer-stack {
       font-family: var(--font-mono); font-size: 11px;
@@ -1104,7 +1114,7 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <p class="section-number reveal">04 — Contact</p>
-      <h2 class="section-title reveal stagger-1">Travaillons <em style="font-family: var(--font-display); font-style: italic; background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ensemble</em></h2>
+      <h2 class="section-title reveal stagger-1">Travaillons <em style="font-family: var(--font-display); font-style: normal; font-weight: 800; background: linear-gradient(135deg, var(--neon-cyan), var(--neon-magenta)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ensemble</em></h2>
       <p class="section-subtitle reveal stagger-2">
         Ouvert aux opportunités — poste, freelance, ou collaboration sur un projet ambitieux.
       </p>
